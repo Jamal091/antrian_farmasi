@@ -1,0 +1,112 @@
+:root {
+  --hospital-green: #4dd169;
+  --hospital-blue: #2cb4c9;
+  --hospital-light: #daf0f8;
+  --hospital-dark: #2e96a4;
+}
+
+body {
+  background-color: var(--hospital-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+}
+
+.header {
+  background-color: var(--hospital-dark);
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-queue {
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.card-queue:hover {
+  transform: translateY(-5px);
+}
+
+.queue-number {
+  font-size: 6rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+.current-queue {
+  background-color: var(--hospital-green);
+  color: white;
+}
+
+.next-queue {
+  background-color: var(--hospital-blue);
+  color: white;
+}
+
+.queue-list {
+  max-height: 500px;
+  overflow-y: auto;
+  font-size: 1.3rem;
+}
+
+.badge-status {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.badge-service {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tv-friendly-text {
+  font-size: 1.5rem;
+}
+.hospital-logo {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--hospital-green);
+  font-size: 2.5rem;
+}
+
+/* Animasi untuk antrian saat ini */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.current-queue .queue-number {
+  animation: pulse 2s infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hospital-blue);
+  border-radius: 10px;
+}

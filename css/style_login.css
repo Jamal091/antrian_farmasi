@@ -1,0 +1,94 @@
+:root {
+    --hospital-green: #4dd169;
+    --hospital-blue: #2cb4c9;
+    --hospital-light: #daf0f8;
+    --hospital-dark: #2e96a4;
+}
+
+body {
+    background-color: var(--hospital-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-card {
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: none;
+    overflow: hidden;
+}
+
+.login-header {
+    background-color: var(--hospital-dark);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-body {
+    padding: 2rem;
+    background-color: white;
+}
+
+.form-control {
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    font-size: 1.1rem;
+}
+
+.form-control:focus {
+    border-color: var(--hospital-blue);
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+}
+
+.btn-login {
+    background-color: var(--hospital-green);
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--hospital-dark);
+}
+
+.hospital-logo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--hospital-green);
+    font-size: 2.5rem;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f5c6cb;
+}
