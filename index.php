@@ -59,9 +59,27 @@ $queues = [
         <div class="row mb-4">
             <!-- Antrian Saat Ini -->
             <div class="col-lg-6 mb-4">
+                <div class="card card-queue next-queue h-100">
+                    <div class="card-body text-center py-4">
+                        <h2 class="card-title"><i class="fas fa-pills me-2"></i>Antrian Obat</h2>
+                        <div class="queue-number"><?= $next_queue['number'] ?></div>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <span class="badge rounded-pill service-<?= strtolower($next_queue['rm']) ?> badge-service fs-5">
+                                <?= $next_queue['rm'] ?>
+                            </span>
+                        </div>
+                        <p class="card-text fs-3"><i class="far fa-clock me-2"></i>Mulai: <?= $current_queue['start_time'] ?></p>
+                        <button class="btn btn-light btn-lg mt-3 fs-3 px-5 py-3">
+                            <i class="fas fa-bullhorn me-2"></i>PANGGIL BERIKUTNYA
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
                 <div class="card card-queue current-queue h-100">
                     <div class="card-body text-center py-4">
-                        <h2 class="card-title"><i class="fas fa-user-clock me-2"></i>SEDANG DILAYANI</h2>
+                        <h2 class="card-title"><i class="fas fa-pills me-2"></i>SEDANG DILAYANI</h2>
                         <div class="queue-number"><?= $current_queue['number'] ?></div>
                         <div class="d-flex justify-content-center align-items-center mb-3">
                             <span class="badge rounded-pill bg-light text-dark fs-5 px-4 py-2">
@@ -78,14 +96,14 @@ $queues = [
             <div class="col-lg-6 mb-4">
                 <div class="card card-queue next-queue h-100">
                     <div class="card-body text-center py-4">
-                        <h2 class="card-title"><i class="fas fa-user-plus me-2"></i>ANTRIAN SELANJUTNYA</h2>
+                        <h2 class="card-title"><i class="fas fa-pills me-2"></i>Antrian Obat Racikan</h2>
                         <div class="queue-number"><?= $next_queue['number'] ?></div>
                         <div class="mb-4">
                             <span class="badge rounded-pill service-<?= strtolower($next_queue['rm']) ?> badge-service fs-5">
                                 <?= $next_queue['rm'] ?>
                             </span>
                         </div>
-                        <p class="card-text fs-3"><i class="far fa-clock me-2"></i>Estimasi: <?= $next_queue['estimated_time'] ?></p>
+                        <p class="card-text fs-3"><i class="far fa-clock me-2"></i>Mulai: <?= $current_queue['start_time'] ?></p>
                         <button class="btn btn-light btn-lg mt-3 fs-3 px-5 py-3">
                             <i class="fas fa-bullhorn me-2"></i>PANGGIL BERIKUTNYA
                         </button>
